@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b26ue1xjw3l4r"
-path="res://.godot/imported/Pink_Monster_Idle_4.png-bb83e3d79ac30ac8cc5edb54c5dd0eb7.ctex"
+uid="uid://c0mytrfglgycy"
+path="res://.godot/imported/8.png-2057cce1195f859193fc1135d2b6443e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Pink_Monster_Idle_4.png"
-dest_files=["res://.godot/imported/Pink_Monster_Idle_4.png-bb83e3d79ac30ac8cc5edb54c5dd0eb7.ctex"]
+source_file="res://projet/assets/images/8.png"
+dest_files=["res://.godot/imported/8.png-2057cce1195f859193fc1135d2b6443e.ctex"]
 
 [params]
 
