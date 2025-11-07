@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs7sma3hwnv6i"]
+
+[ext_resource type="Texture2D" uid="uid://bkqohotsy8t18" path="res://projet/assets/images/flag2.png" id="1_515wu"]
+[ext_resource type="Script" uid="uid://u0672dcn5xs6" path="res://projet/finish.gd" id="1_tk8go"]
+[ext_resource type="AudioStream" uid="uid://ds1a616x01fj1" path="res://projet/assets/audio/good.mp3" id="3_duf2u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_opcp3"]
+size = Vector2(94, 86)
+
+[node name="Finish" type="Area2D"]
+position = Vector2(-1, 0)
+script = ExtResource("1_tk8go")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(859, -57)
+scale = Vector2(0.291667, 0.325806)
+texture = ExtResource("1_515wu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(851, -61)
+shape = SubResource("RectangleShape2D_opcp3")
+
+[node name="finishsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_duf2u")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://13chvcto620m"]
+
+[ext_resource type="Script" uid="uid://ee2xl1rcgrha" path="res://projet/collectibles.gd" id="1_i1em3"]
+[ext_resource type="Texture2D" uid="uid://ch4ws7qcy34xx" path="res://projet/assets/images/coin.png" id="1_xgnxc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1em3"]
+atlas = ExtResource("1_xgnxc")
+region = Rect2(0, 0, 84, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqb1g"]
+atlas = ExtResource("1_xgnxc")
+region = Rect2(84, 0, 84, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knb0y"]
+atlas = ExtResource("1_xgnxc")
+region = Rect2(168, 0, 84, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_endtk"]
+atlas = ExtResource("1_xgnxc")
+region = Rect2(252, 0, 84, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n470v"]
+atlas = ExtResource("1_xgnxc")
+region = Rect2(336, 0, 84, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otjiv"]
+atlas = ExtResource("1_xgnxc")
+region = Rect2(420, 0, 84, 84)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ghgnm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1em3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqb1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knb0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_endtk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n470v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otjiv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cknl3"]
+radius = 7.2111
+
+[node name="Collectibles" type="Area2D"]
+script = ExtResource("1_i1em3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, 4)
+scale = Vector2(0.142857, 0.142857)
+sprite_frames = SubResource("SpriteFrames_ghgnm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 4)
+shape = SubResource("CircleShape2D_cknl3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
