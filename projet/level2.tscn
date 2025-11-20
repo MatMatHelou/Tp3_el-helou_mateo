@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://cg6ogoaqiuth2"]
+[gd_scene load_steps=12 format=4 uid="uid://cg6ogoaqiuth2"]
 
 [ext_resource type="Texture2D" uid="uid://co54p0ch3fiuf" path="res://projet/assets/images/GrassDirt.png" id="1_fegbo"]
 [ext_resource type="PackedScene" uid="uid://dylygt02sxhwf" path="res://projet/personnage.tscn" id="2_3dnek"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://13chvcto620m" path="res://projet/collectibles.tscn" id="3_oeeew"]
 [ext_resource type="Script" uid="uid://cfkobbiocjb2a" path="res://projet/game_manager.gd" id="4_eq4wu"]
 [ext_resource type="PackedScene" uid="uid://bs7sma3hwnv6i" path="res://projet/finish.tscn" id="6_oeeew"]
+[ext_resource type="PackedScene" uid="uid://bgigns1um242d" path="res://projet/main_menu.tscn" id="7_ewfpk"]
+[ext_resource type="AudioStream" uid="uid://dlov01t8ljg4n" path="res://projet/assets/audio/sound2.mp3" id="8_tuokh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8nm2c"]
 texture = ExtResource("1_fegbo")
@@ -381,4 +383,8 @@ vertical_alignment = 1
 
 [node name="Finish" parent="." instance=ExtResource("6_oeeew")]
 position = Vector2(-783, 626)
-target_level = null
+target_level = ExtResource("7_ewfpk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_tuokh")
+autoplay = true
