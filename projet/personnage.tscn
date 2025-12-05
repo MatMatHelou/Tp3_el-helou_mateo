@@ -1,11 +1,12 @@
 [gd_scene load_steps=33 format=3 uid="uid://dylygt02sxhwf"]
 
 [ext_resource type="Texture2D" uid="uid://b26ue1xjw3l4r" path="res://projet/assets/images/Pink_Monster_Idle_4.png" id="1_e0xr8"]
-[ext_resource type="Script" uid="uid://d0uandyuql2gh" path="res://projet/personnage(2).gd" id="1_f4dxi"]
 [ext_resource type="Texture2D" uid="uid://bpmrsuq771aqt" path="res://projet/assets/images/Pink_Monster_Jump_8.png" id="2_f4dxi"]
 [ext_resource type="Texture2D" uid="uid://upmw0tay2re7" path="res://projet/assets/images/Pink_Monster_Run_6.png" id="3_qf010"]
 [ext_resource type="Texture2D" uid="uid://cvlt3t6arigs3" path="res://projet/assets/images/Pink_Monster_Walk_6.png" id="4_hrdh5"]
 [ext_resource type="AudioStream" uid="uid://deq61qq51welq" path="res://projet/assets/audio/jump.mp3" id="6_qf010"]
+
+[sub_resource type="GDScript" id="GDScript_f4dxi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x6iaj"]
 atlas = ExtResource("1_e0xr8")
@@ -203,7 +204,7 @@ radius = 12.0
 height = 38.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_f4dxi")
+script = SubResource("GDScript_f4dxi")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(59, 161)

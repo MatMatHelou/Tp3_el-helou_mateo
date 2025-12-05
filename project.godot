@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="tp3_el-helou_mateo"
-run/main_scene="uid://dylygt02sxhwf"
+run/main_scene="uid://8xsmrwoom140"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
